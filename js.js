@@ -94,15 +94,6 @@ let fahrenheitTemp = document.querySelector("#fahrenheit");
 fahrenheitTemp.addEventListener("click", changeFahrenheit);
 
 //current location and temp
-function currentCityData(response) {
-  document.querySelector("#new-city").innerHTML =
-    "📍" + response.data.name + ", " + response.data.sys.country;
-  document.querySelector("#temperature-unit").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#weather-description").innerHTML =
-    response.data.weather[0].description;
-}
 
 function currentLocation(position) {
   let currentLat = position.coords.latitude;
