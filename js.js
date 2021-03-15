@@ -104,7 +104,7 @@ function currentLocation(position) {
   let apiUrl = `${apiEndpoint}lat=${currentLat}&lon=${currentLong}&appid=${apiKey}&units=${units}`;
   
 
-  axios.get({apiUrl}).then(showWeatherConditions);
+  axios.get(apiUrl).then(showWeatherConditions);
 }
 
 function updateLocation(event) {
